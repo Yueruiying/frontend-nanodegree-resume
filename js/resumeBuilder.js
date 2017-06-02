@@ -1,6 +1,8 @@
 /*
 This is empty on purpose! Your code to build the resume will go here.
  */
+'use strict';
+
 //bio
 var bio = {
     'name': 'Yue Ruiying',
@@ -31,9 +33,7 @@ bio.display = function() {
     var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
     var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 
-    $('#topContacts').append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
-
-    $('#footerContacts').append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
+    $('#topContacts,#footerContacts').append(formattedMobile,formattedEmail,formattedGithub,formattedTwitter,formattedLocation);
 
     if (bio.skills.length > 0) {
     	$("#header").append(HTMLskillsStart);
